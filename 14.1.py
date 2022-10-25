@@ -22,6 +22,6 @@ def delete_pos(lst, position_number):
     return lst
 
 
-pprint(delete_pos(data, 3))
+pprint(delete_pos(data, 2))
 
 
