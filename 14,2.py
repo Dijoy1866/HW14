@@ -1,0 +1,22 @@
+
+# Задание 2
+#Добавление элемента с любым position, например мы хотим в наш исходный список добавить
+#элемент у которого position = 1, то должны получить:
+
+from pprint import pprint
+
+data = [
+    {'name': 'Test 1', 'position': 1},
+    {'name': 'Test 2', 'position': 2},
+    {'name': 'Test 3', 'position': 3},
+]
+
+def add_pos(lst, position_number, arg_for_pos):
+    new_dict = {'name': f'{arg_for_pos} {len(lst) + 1}', 'position': None}
+    lst.insert(position_number - 1, new_dict)
+
+    for i, i_value in enumerate(lst):
+        i_value['position'] = (i + 1)
+    return lst
+
+pprint(add_pos(data, 1, 'Test'))
